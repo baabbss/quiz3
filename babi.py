@@ -11,6 +11,8 @@ result_json = r.text
 res = json.loads(result_json)
 res_structured = json.dumps(res, indent=4)
 print(res_structured)
+print(r.status_code)
+print(r.headers)
 
 conn = sqlite3.connect('dnd_spells.db')
 cursor = conn.cursor()
